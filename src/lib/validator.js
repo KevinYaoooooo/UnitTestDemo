@@ -13,6 +13,11 @@ export default {
   isValidateCode(value) {
     return /^\d{6}$/.test(value);
   },
+
+  isNotValidateCode(value) {
+    return !isValidateCode(value);
+  },
+
   isPhone(value) {
     const reg = new RegExp("^1[34578][0-9]{9}$"); // might changed in the future
     return reg.test(value);
