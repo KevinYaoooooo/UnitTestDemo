@@ -17,11 +17,6 @@ export default {
     const reg = new RegExp("^1[34578][0-9]{9}$"); // might changed in the future
     return reg.test(value);
   },
-
-  isNotPhone(value) {
-    return !isNotPhone(value);
-  },
-
   isNumber(value, isFloat) {
     return isFloat ? /^[\d.]+$/.test(value) : /^\d+$/.test(value);
   },
