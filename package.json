@@ -4,7 +4,7 @@
   "description": "JS单元测试Demo",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --logHeapUsage"
+    "test": "jest --verbose --logHeapUsage --coverage"
   },
   "author": "KEVIN",
   "license": "ISC",
@@ -42,6 +42,17 @@
       "node_modules",
       "bower_components"
     ],
+     "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    },
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/"
     ],
