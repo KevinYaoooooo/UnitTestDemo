@@ -20,4 +20,8 @@ export default {
   isNumber(value, isFloat) {
     return isFloat ? /^[\d.]+$/.test(value) : /^\d+$/.test(value);
   },
+
+  isNotNumber(value, isFloat) {
+    return !isNumber(value, isFloat);
+  },
 };
