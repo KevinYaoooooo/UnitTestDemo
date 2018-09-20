@@ -1,0 +1,7 @@
+##############################
+# Example Simple Settings
+#############################
+mergeable:
+  pull_requests:
+    # Minimum of 5 approvals is needed.
+    # approvals: 5
