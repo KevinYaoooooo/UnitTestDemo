@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env", {"modules": false}],
+    "react"
+  ],
+  "plugins" : [
+    "transform-async-generator-functions",
+    "transform-class-properties",
+    "transform-export-extensions",
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs","dynamic-import-node"]
+    }
+  }
+}
