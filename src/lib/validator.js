@@ -10,6 +10,11 @@ export default {
   isPassword(value) {
     return /^[\x21-\x7E]{8,32}$/.test(value);
   },
+
+  isNotPassword(value) {
+    return !isPassword(value);
+  },
+
   isValidateCode(value) {
     return /^\d{6}$/.test(value);
   },
