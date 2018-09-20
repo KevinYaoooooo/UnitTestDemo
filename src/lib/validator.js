@@ -10,9 +10,19 @@ export default {
   isPassword(value) {
     return /^[\x21-\x7E]{8,32}$/.test(value);
   },
+
+  isNotPassword(value) {
+    return !isPassword(value);
+  },
+
   isValidateCode(value) {
     return /^\d{6}$/.test(value);
   },
+
+  isNotValidateCode(value) {
+    return !isValidateCode(value);
+  },
+
   isPhone(value) {
     const reg = new RegExp("^1[34578][0-9]{9}$"); // might changed in the future
     return reg.test(value);
