@@ -7,12 +7,27 @@ export default {
     const reg = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
     return reg.test(value);
   },
+
+  isNotEmail(value) {
+    return !isEmail(value);
+  },
+  
   isPassword(value) {
     return /^[\x21-\x7E]{8,32}$/.test(value);
   },
+
+  isNotPassword(value) {
+    return !isPassword(value);
+  },
+
   isValidateCode(value) {
     return /^\d{6}$/.test(value);
   },
+
+  isNotValidateCode(value) {
+    return !isValidateCode(value);
+  },
+
   isPhone(value) {
     const reg = new RegExp("^1[34578][0-9]{9}$"); // might changed in the future
     return reg.test(value);
