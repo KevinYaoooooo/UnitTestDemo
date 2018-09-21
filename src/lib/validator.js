@@ -7,6 +7,11 @@ export default {
     const reg = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
     return reg.test(value);
   },
+
+  isNotEmail(value) {
+    return !isEmail(value);
+  },
+  
   isPassword(value) {
     return /^[\x21-\x7E]{8,32}$/.test(value);
   },
